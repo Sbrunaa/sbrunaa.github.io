@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;400&display=swap');
+
+/*paleta de cores*/
+:root{
+    --primary-color:#e2b7f0;
+
+    --primary-bg-color:#3a0f43;
+    --secondary-bg-color:#5d2768;
+    --border-color:#5d2768;
+
+    --title-color:#b85fd6;
+    --text-color:#b85fd6;
+    --link-color:#b85fd6;
+    --icon-color:#e1b7f0;
+}
+
+body{
+    background: var(--primary-bg-color);
+    font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif  ;
+}
+
+a{
+    text-decoration: none;
+}
+
+i{
+    color: var(--icon-color);
+}
+.header{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.header-brand .brand_logo{
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+#toggleTheme{
+    font-size:1.5rem;
+    color:var(--primary-color);
+}
+
+.menu{
+    display:flex;
+    align-items: center;
+    background: var(--primary-bg-color);
+}
+
+.menu-item{
+    width: 100%;
+}
+
+.menu-mobile{
+    width: 100vw;
+    position: fixed;
+    bottom:0;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+}
+
+.menu-mobile .menu_link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    gap: .5rem;
+}
+
+.menu_link.active .menu_icon, .menu_text{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.menu_icon, .menu_text{
+    color: var(--text-color);
+}
+
+.menu_icon{
+    font-size: 1.5rem;
+}
+
+.menu_text{
+    font-size: .75ren;
+    text-transform: uppercase;
+}
+
+@media(min-width: 768px){
+    .menu-mobile{
+        display:none;
+    }
+}
