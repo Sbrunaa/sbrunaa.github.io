@@ -7,7 +7,7 @@
 
     --primary-bg-color:#3a0f43;
     --secondary-bg-color:#5d2768;
-    --primary-border-color:#5d2768;
+    --primary-border-color:#b85fd6;
     --secondary-border-color:#b85fd6;
 
     --title-color:#e2b7f0;
@@ -21,7 +21,7 @@
 
     --primary-bg-color:#f6ebfc;
     --secondary-bg-color:#e2b7f0;
-    --primary-border-color:#b85fd6;
+    --primary-border-color:#5d2768;
     --secondary-border-color:#5d2867;
 
     --title-color:#5d2867;
@@ -43,6 +43,18 @@ body{
     font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif  ;
     color: var(--text-color);
 }
+::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--secondary-bg-color);
+    border-radius: 50rem;
+}
 
 a{
     text-decoration: none;
@@ -54,6 +66,10 @@ a:hover {
     font-weight: 600;
 }
 
+i{
+    color: var(--icon-color);
+}
+
 b{
     font-weight: 400;
 }
@@ -63,6 +79,24 @@ h1{
     font-weight: 200;
 }
 
+h2{
+   font-family: 2rem;
+   align-items: center; 
+   margin-bottom: 2rem;
+}
+
+h3{
+    font-size: 1.55rem;
+    text-align: left;
+}
+
+h4{
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.15rem;
+    text-align: left;
+}
+
 h1, h2, h3{
     font-family: 'League Spartan', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
@@ -70,8 +104,8 @@ h1, h2, h3{
     font-weight: 200;
 }
 
-i{
-    color: var(--icon-color);
+p, span, li{
+    font-size: 1rem;
 }
 
 p{
@@ -201,18 +235,21 @@ p{
     border: 1px solid var(--primary-color);
 }
 
+main, .projects .about, .contact{
+    padding: 2.5rem 1rem;
+}
+
+
 main{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2.5rem 1rem;
 }
 
 .main_container{
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2.5rem 1rem;
 }
 
 .main_container2 iframe{
@@ -220,31 +257,32 @@ main{
     aspect-ratio: 16/9;
 }
 
-.shills{
+.technologies{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
     justify-content: flex-start;
-    padding: 6.25rem 1rem 2rem 1rem;
+    gap: 1.25rem;
+    padding: 6.25rem 1rem 2rem;
     background: var(--secondary-bg-color);
     margin-top: -5.5rem;
 }
 
 
-.shills h2{
+.technologies h2{
     font-size: 2rem;
     text-transform: none;
+    letter-spacing: normal;
+    text-align: start;
 }
 
-.shills_list{
+.technologies_list{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     gap: .5rem;
 }
 
-.shills_item{
+.technologies_item{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -256,9 +294,226 @@ main{
     border-radius: 50rem;
 }
 
-.shills_logo{
+.technologies_logo{
     height: 2.4rem;
 }
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projects_container{
+    display:flex;
+    flex-direction:column;
+    gap: 4rem;
+}
+
+.projects_card{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card_cover{
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card_title{
+    font-family: 1.25rem;
+}
+
+.card__list, .about__list {
+    margin-left: 1.25rem
+}
+
+.card_item .about_item{
+    list-style: disc;
+}
+
+.card_description{
+    font-size: 1rem;
+    color: var(--title-color);
+}
+
+.card_buttons, .description_buttons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card_buttons .btn{
+    padding: .65rem 1.25rem;
+}
+
+.card_buttons .btn span{
+    font-size: 1rem;
+}
+
+.card_body .technologies_list{
+    width: 4rem;
+    height: 4rem;
+}
+
+.card_body .technologies_logo{
+    height: 2rem;
+}
+
+.projects .btn{
+    width: auto;
+    height: auto;
+}
+
+.about{
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+
+.about_container .about_container2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.about_photo {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    border-radius: 50rem;
+    border: 1px solid var(--primary-border-color);
+}
+  
+
+.about{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    border-radius: 50rem;
+    border: 1px solid var(--primary-border-color);
+}
+
+.about_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+
+.about_icons{
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+}
+
+.about_icons i{
+    font-size: 1.25rem;
+}
+
+.about_container .col1,
+.about_container2 .col2{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    gap: 2rem;
+}
+
+.about_container2 .row1,
+.about_container2 .row2{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.accordion_header{
+    width: 100%;
+    display: flex;
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--primary-border-color);
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.accordion_header span{
+    color: var(--title-color);
+}
+
+.accordion_header.star{
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+}
+
+.accordion_header.end,
+.accordion_item.active .accordion_body.end{
+    border-radius: 0rem 0rem 0.25rem 0.25rem;
+}
+
+.accordion_item.active .accordion_header.end{
+    border-radius: 0;
+}
+
+.accordion_body{
+    display: none;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    border: 1px solid var(--primary-border-color);
+}
+
+.accordion_item.active .accordion_header{
+    background: var(--secondary-bg-color);
+}
+
+.accordion_item.active .accordion_body{
+    display: flex;
+}
+
+.accordion_item.active .bi-caret-down-fill{
+    transform: rotate(180deg);
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 1px solid var(--primary-border-color);
+}
+
+.contact p{
+    text-align: center;
+}
+
+.contact .btn{
+    width: auto;
+}
+
+.contact .email{
+    text-transform: lowercase;
+}
+
 
 footer{
     margin-bottom: 5rem;
@@ -267,8 +522,7 @@ footer{
 footer p {
     font-size: .875rem;
     text-align: center;
-    padding: 2rem;
-    margin-bottom: 5rem;
+    padding: 1rem;
 }
 
 @media(min-width: 768px){
@@ -291,38 +545,85 @@ footer p {
         min-width: 30%;
     }
 
-    .main{
+    h1{
+        font-family: 5rem;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+    .main, .projects .about{
         padding: 8rem 6rem 4rem 6rem;
     }
 
-    .main_container2{
+    .contact{
+        padding: 6rem;
+    }
+
+    .contact p{
+        width: 100%;
+    }
+
+    .main_container{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .shills{
+    .technologies{
         padding: 6.25rem 6rem 2rem 6rem;
         margin-top: -6rem;
     }
 
-    .shills_logo{
-        height: 2.4rem;
-    }
-
     footer {
-        margin-bottom: 5rem;
+        margin: 0;
+    }
+}
+
+@media(min-width: 992px){
+    .projects_card{
+        flex-direction: row;
     }
 
-    footer p{
-        font-size: .875rem;
-        text-align: center;
-        padding: 1rem;
+    .projects_card.card-reverse{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .card_cover{
+        width: 55%;
+    }
+
+    .about{
+        gap: 5rem;
+    }
+
+    .about_container .about_container2{
+        display: grid;
+        grid-template-columns:  34% 60%;
+        justify-content: flex-start;
+        gap: 4rem;
+    }
+
+    .about_description{
+        text-align: left;
+    }
+
+    .description_buttons{
+        justify-content: flex-start;
     }
 }
 
 @media (min-width: 1200px) {
-    .main{
+    h2{
+        font-size: 4rem;
+    }
+
+    h3{
+        font-size: 2.5rem;
+    }
+
+    main{
         padding: 12rem 6rem 2rem;    
     }
 
@@ -330,35 +631,52 @@ footer p {
         width: auto;
     }
 
-    .shills{
+    .technologies{
         flex-direction: row;
         justify-content: space-between;
         padding: 10rem 6rem 4rem ;
     }
 
-    .shills h2{
+    .technologies h2{
         font-size: 3.5rem;
         width: 60%;
     }
 
-    .shills_item{
+    .technologies_list{
+        gap: 1rem;
+    }
+
+    .technologies_item{
         width: 6rem;
         height: 6rem;
     }
     
-    .shills_logo{
+    .technologies_logo{
         height: 3rem;
     }
+
+    p, span, li{
+        font-size: 1.15rem;
+    }
+
+   .card_buttons .btn,
+   .description_buttons .btn{
+    width: auto;
+   }
 }
 
 @media (min-width: 1400px) {
     h1{
         font-size: 6.25rem;
     }
-
-    p{
-        font-size: 1.5rem;
+    h2{
+        font-size: 5rem;
     }
+
+    h3{
+        font-size: 3.25rem;
+    }
+
     .header{
         padding: 1rem 15rem;
     }
@@ -367,7 +685,7 @@ footer p {
         padding: 12rem 15rem 2rem;
     }
 
-    .shills{
+    .technologies{
         padding: 10rem 15rem 4rem;
     }
 }
