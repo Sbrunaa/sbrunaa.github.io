@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--descrição-->
-    <meta name="description" content="Portfólio da desenvolvedora front-end Bruna Silva, com objetivo de compartilhar projetos e experiencias">
+    <meta name="description"
+        content="Portfólio da desenvolvedora front-end Bruna Silva, com objetivo de compartilhar projetos e experiencias">
 
     <!--icone da pagina-->
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -19,17 +21,44 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-brand">
-            <img class="brand_logo" src="/assets/images/logo.png" alt="logo EA">
-        </div>
-        <i id="toggleTheme" class="bi bi-sun"></i>
+        <nav class="header_nav">
+            <ul class="menu menu-principal">
+                <li class="menu-item">
+                    <a class="menu_link active" href="#home">
+                        <span class="menu_text">Home</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu_link" href="#projetos">
+                        <span class="menu_text">Projetos</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu_link" href="#sobre">
+                        <span class="menu_text">Sobre</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a class="menu_link" href="#contato">
+                        <span class="menu_text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="header-brand">
+                <img class="brand_logo" src="/assets/images/logo.png" alt="logo">
+            </div>
+            <div class="header_toggle">
+                <i id="toggleTheme" class="bi bi-sun"></i>
+            </div>
+        </nav>
     </header>
-    <nav>
+
+    <nav class="nav-mobile">
         <ul class="menu menu-mobile">
             <li class="menu-item">
                 <a class="menu_link active" href="#home">
                     <i class="menu_icon bi bi-house-heart"></i>
-                    <span class="menu_text" >Home</span>
+                    <span class="menu_text">Home</span>
                 </a>
             </li>
             <li class="menu-item">
@@ -50,8 +79,52 @@
                     <span class="menu_text">Contato</span>
                 </a>
             </li>
-          
         </ul>
     </nav>
+    <main>
+        <div class="main_container">
+            <h1><b>Soluçoes Criativas &</b> Desenvolvimento front-end</h1>
+            <p>Bruna Silva, Itabuna-BA, Desenvolvedora Front-end.</p>
+
+            <ul class="menu menu-social">
+                <li>
+                    <a class="menu_link" href="">
+                        <i class="menu_icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu_link" href="">
+                        <i class="menu_icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <button class="btn btn-primary">
+                <span>Ver Projetos</span>
+                <i class="bi bi-arrow-down-right"></i>
+            </button>
+        </div>
+        <div class="main_container2">
+            <iframe src="https://www.youtube.com/embed/HXKz2-Sohfo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </main>
+    <section class="shills">
+        <h2>Conhecimento  nas principais tecnologias do mercado</h2>
+
+        <ul class="shills_list">
+            <li class="shills_item">
+                <img class="shills_logo" src="/assets/images/technologies/Bootstrap.svg" alt="Logo Bootstrap">
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <p>
+            © 2024.Portfólio desenvolvido para fins educativos no Lab "Construindo seu Portfolio Front-end do Zero" da
+            <a href="https://www.dio.me/" target="_blank">Digital Innovation One</a> por 
+            <a href="https://github.com/Sbrunaa" target="_blank">Bruna Silva</a>.
+        </p>
+    </footer>
+    <script src="/assets/js/main.js"></script>
 </body>
 </html>
+
