@@ -395,7 +395,7 @@ main{
 
 .about_photo {
     width: 100%;
-    object-fit: cover;
+    object-fit:cover;
     object-position: center;
     pointer-events: none;
     border-radius: 50rem;
