@@ -82,7 +82,7 @@ h1{
 h2{
    font-family: 2rem;
    align-items: center; 
-   margin-bottom: 2rem;
+   letter-spacing: 0.4rem;
 }
 
 h3{
@@ -249,7 +249,7 @@ main{
 .main_container{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .main_container2 iframe{
@@ -362,7 +362,10 @@ main{
     font-size: 1rem;
 }
 
-.card_body .technologies_list{
+.card_body .technologies_list {
+    gap: .75rem;
+}
+.card_body .technologies_item{
     width: 4rem;
     height: 4rem;
 }
@@ -391,16 +394,6 @@ main{
 }
 
 .about_photo {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-    border-radius: 50rem;
-    border: 1px solid var(--primary-border-color);
-}
-  
-
-.about{
     width: 100%;
     object-fit: cover;
     object-position: center;
